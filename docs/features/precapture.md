@@ -1,6 +1,9 @@
 # RAW pre-capture
 
-Status: 🟢 works in the emulator. Never run on a camera.
+> [!NOTE]
+> **Not included in the current build.** RAW pre-capture was explored in an earlier build and worked in the emulator, as described below. The current single build doesn't contain it, and installing the current build won't give you this feature. This page is kept as a record of that work.
+
+Status: ⚪ not in the current build. Explored earlier in the emulator. Never run on a camera.
 
 ## What it does
 

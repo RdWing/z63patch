@@ -35,3 +35,5 @@ The emulator can't produce ProRes files yet, not even with stock firmware at HQ,
 - Whether the hardware encoder accepts every grade. This needs a real camera.
 - Actual data rates and remaining-time figures for Standard, LT and Proxy.
 - Playback of the new grades on the camera.
+
+See also [known limits](../known-limits.md): a recording started by remote, app or HDMI trigger at the moment the patch switches on is untested.

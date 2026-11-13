@@ -17,13 +17,17 @@ The rates are nominal budgets for 16:9 recording. In [6K open gate](open-gate.md
 
 ## How you use it
 
-With N-RAW as the file type, the quality setting in the video recording menu offers all four tiers. The choice is saved with your settings and survives a restart.
+With N-RAW as the file type, the quality setting in the video recording menu offers all four tiers. The choice is saved with your settings and survives a restart. Until you pick a tier, N-RAW keeps the High or Normal setting you had in Nikon's menu.
+
+N-RAW needs an exFAT-formatted card. This is the camera's own rule.
 
 ## Design notes
 
 N-RAW's encoder already supports several compression levels. Nikon uses two of them for High and Normal. Fine and Basic select two of the others, with budgets worked out the same way Nikon works out its own. Files stay standard N-RAW, so the camera and editing software read them like any other N-RAW clip. Fine and High share the full-quality marking in the file. Normal and Basic share the lower one.
 
 ## Tested so far
+
+Some of these checks were made on an earlier build of the same feature.
 
 - Emulator recordings at all four tiers, with each file closing correctly and the camera returning to standby.
 
