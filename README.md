@@ -43,7 +43,7 @@ Because the changes go into the camera's own firmware, the new options show up i
 
 ## Features
 
-There is one build, and it contains all of these features.
+There is one build, and it contains every feature marked 🟢 or 🟡 below. Features marked 🔧 are being worked on and are not in the build yet.
 
 | | Feature | What you get | Status in the emulator |
 | :---: | --- | --- | --- |
@@ -53,14 +53,14 @@ There is one build, and it contains all of these features.
 | 🟢 | **[N-RAW quality tiers](docs/features/nraw-quality.md)** | High (3.0 bits per pixel), Fine (2.0), Normal (1.5) and Basic (1.0). Fine and Basic are new. In 6K open gate, High uses 2.5 | Test recordings at all four tiers |
 | 🟢 | **[Anamorphic desqueeze](docs/features/desqueeze.md)** | 1.25× to 2.00× live-view desqueeze, also combined with open gate | Works on the rear screen; viewfinder needs testing on a camera |
 | 🟢 | **[Log options](docs/features/log.md)** | S-Log3 with S-Gamut3.Cine and Log3G10 with REDWideGamutRGB, next to the stock N-Log with BT.2020, with view assist for each | Test recordings in all three Log types decode with the right metadata. Colour and view assist should still be checked on a real camera |
+| 🔧 | **[RAW pre-capture](docs/features/precapture.md)** | C15 and C30 pre-release bursts saved as RAW, RAW+JPEG or JPEG (stock saves JPEG only) | In progress. Worked in the emulator in an earlier build; not yet in the current build |
 
-🟢 works in the emulator · 🟡 partly working
+🟢 works in the emulator · 🟡 partly working · 🔧 in progress, not in the current build
 
 Everything in this table was tested in the emulator only. None of it has run on a camera. Click a feature for how it works and what's still unknown.
 
 **Not in the current build:**
 
-- **[RAW pre-capture](docs/features/precapture.md)** (C15 and C30 bursts saved as RAW) was explored in an earlier build and worked in the emulator. The current build doesn't include it.
 - **Open gate for H.265 and ProRes, and at 50p/60p** isn't built yet. Sensor timing and data rate for 50p/60p look sufficient on paper.
 - **Pixel shift** merging exists as desktop tools only.
 
@@ -89,7 +89,6 @@ These are in no particular order. Items marked *feasibility* first need research
 - DGO mode for stills and video (stretch goal)
 
 **Stills**
-- RAW pre-capture in the current build
 - Sustained C30/C60 RAW bursts
 - SDR RAW+HEIF
 
