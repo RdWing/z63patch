@@ -149,7 +149,8 @@ All screenshots come from the emulator. The colour bars are its stand-in for the
     <td><img src="docs/images/desqueeze.png" alt="Desqueeze menu from Off to 2.00x"><br><sub><b>Desqueeze</b>: preview anamorphic footage correctly</sub></td>
   </tr>
   <tr>
-    <td colspan="2"><img src="docs/images/log-type-menu.png" alt="Video recording menu with the Log type row set to S-Log3, next to the H.265 quality and Desqueeze rows"><br><sub><b>Log type</b>: a row in the video recording menu selects N-Log, S-Log3 or Log3G10</sub></td>
+    <td width="50%"><img src="docs/images/log-type-options.png" alt="Log type page with the options N-Log, S-Log3 and Log3G10"><br><sub><b>Log type</b>: N-Log, S-Log3 or Log3G10</sub></td>
+    <td width="50%"><img src="docs/images/log-type-menu.png" alt="Video recording menu with the Log type row set to S-Log3, next to the H.265 quality and Desqueeze rows"><br><sub><b>Where it is</b>: the Log type row in the video recording menu</sub></td>
   </tr>
   <tr>
     <td colspan="2"><img src="docs/images/open-gate-imenu-strip.png" alt="i-menu frame size strip with the title [FX 3:2] 6048x4032; 30p"><br><sub><b>Open gate in the i-menu</b>: the six 3:2 options follow the regular frame sizes on the strip, and the title line reads [FX 3:2].</sub></td>

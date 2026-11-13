@@ -18,9 +18,13 @@ This lets Z6III footage drop into workflows and LUTs built for those formats, an
 
 Set the tone mode to N-Log as usual, then choose N-Log, S-Log3 or Log3G10 under **Log type** in the video recording menu.
 
+![Log type page with the options N-Log, S-Log3 and Log3G10](../images/log-type-options.png)
+
+*Emulator screenshot: the Log type page.*
+
 ![Video recording menu with the Log type row set to S-Log3](../images/log-type-menu.png)
 
-*Emulator screenshot: the Log type row in the video recording menu.*
+*Emulator screenshot: the Log type row in the video recording menu, here set to S-Log3.*
 
 Tone mode itself stays on Nikon's N-Log setting; the Log type row decides which curve and colour space are recorded. The choice takes effect from the next recording and is tagged in the file, so editing software knows which curve and colour space it holds. Like the other z63patch settings, it is one setting for the whole camera, not stored per shooting menu bank.
 
