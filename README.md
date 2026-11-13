@@ -57,7 +57,7 @@ There is one build, and it contains every feature marked 🟢 or 🟡 below. Fea
 
 🟢 works in the emulator · 🟡 partly working · 🔧 in progress, not in the current build
 
-Everything in this table was tested in the emulator only. None of it has run on a camera. Click a feature for how it works and what's still unknown.
+Click a feature for how it works and what's still unknown.
 
 **Not in the current build:**
 
@@ -132,9 +132,8 @@ The full description is in [How the patch behaves](docs/how-it-works.md). In sho
 The full list is in [Known limits](docs/known-limits.md). The main ones:
 
 - After power-on in movie mode, a stored 3:2 frame size or desqueeze ratio takes effect at the first recording start, lever move, card change or changed setting, not immediately.
-- In the i-menu list, pressing OK on the highlighted regular frame size doesn't switch 3:2 off. Pick another entry instead.
-- Real-length 3:2 clips, ProRes recording, waking from standby and several other behaviours have been checked only in the emulator, or not at all.
-- A recording started by remote, app or HDMI trigger at the moment the patch switches on is untested.
+- To leave open gate, choose any regular frame size, in the menu or with the dial in the i-menu. One quirk: the i-menu's full list opens with the regular size already highlighted, and pressing OK on it without moving changes nothing.
+- A recording started by remote, app or HDMI trigger at the moment the patch switches on may give one ProRes clip at an inconsistent grade.
 
 ## Screenshots
 
@@ -148,6 +147,9 @@ All screenshots come from the emulator. The colour bars are its stand-in for the
   <tr>
     <td><img src="docs/images/nraw-quality.png" alt="N-RAW quality menu: High, Fine, Normal, Basic"><br><sub><b>N-RAW</b>: four quality tiers for longer recording per card</sub></td>
     <td><img src="docs/images/desqueeze.png" alt="Desqueeze menu from Off to 2.00x"><br><sub><b>Desqueeze</b>: preview anamorphic footage correctly</sub></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/images/log-type-menu.png" alt="Video recording menu with the Log type row set to S-Log3, next to the H.265 quality and Desqueeze rows"><br><sub><b>Log type</b>: a row in the video recording menu selects N-Log, S-Log3 or Log3G10</sub></td>
   </tr>
   <tr>
     <td colspan="2"><img src="docs/images/open-gate-imenu-strip.png" alt="i-menu frame size strip with the title [FX 3:2] 6048x4032; 30p"><br><sub><b>Open gate in the i-menu</b>: the six 3:2 options follow the regular frame sizes on the strip, and the title line reads [FX 3:2].</sub></td>
@@ -169,7 +171,6 @@ The patcher checks that the firmware file is Nikon's unmodified C2.01 and that t
 
 The patch will be published as a source-only patcher. It runs on your own computer, works on your own copy of Nikon's firmware file and your own key material, and produces the patched update file from them. The repository will contain no Nikon firmware, original or modified, and no key material.
 
-The patcher will be published only after a successful first install on a real camera.
 
 ## Road to real hardware
 
