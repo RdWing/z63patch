@@ -8,12 +8,13 @@ There is one build, and it contains every feature listed in the [README](../READ
 
 Once installed, the firmware behaves like stock Nikon firmware until you opt in. You opt in by putting a small **arm file** on the memory card. Its name and contents will be documented with the patcher.
 
+The arm file is a simple on/off switch. With it, the whole patch is active, with every feature. Without it, the camera is stock. You can't use it to turn on individual features.
+
 - With no card in the camera, or with a card that has no arm file, the camera works as stock.
 - With the arm file on the card, the patch switches on a few seconds after power-on. This happens in photo or movie mode.
 - The patch waits while a menu, playback or the i-menu is open, or while a recording is running, and switches on once that has ended.
-- If it hasn't been able to switch on within about two minutes of power-on, it stays off until the camera is next switched off and on. Time spent waiting for a menu, playback, the i-menu or a recording doesn't count towards the two minutes.
 
-In the current build, the microphone input row in the movie menu shows a short marker while the patch is active. This is a test aid and will change before the patch is meant for normal use.
+While the patch is active, the microphone input row in the video recording menu shows a short marker text in place of its usual value. If you see it, the patch is on.
 
 ## Going back to stock behaviour
 

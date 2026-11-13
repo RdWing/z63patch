@@ -126,7 +126,7 @@ The full description is in [How the patch behaves](docs/how-it-works.md). In sho
 - **Switching on.** With the arm file present, the features switch on a few seconds after power-on, in photo or movie mode. The patch waits while a menu, playback or the i-menu is open or a recording is running.
 - **Switching off.** Removing the card returns the camera to stock behaviour. In movie mode this happens once you switch to photo mode. It never happens in the middle of a recording.
 - **Firmware updates** are refused while the patch is active, and never when it isn't. To update, remove the card or the arm file, switch the camera off with the power switch for at least 10 seconds, switch it on, then update as usual.
-- **One build.** Every feature is in the same build. Nothing is chosen when the firmware is made.
+- **One build, one switch.** Every feature is in the same build. The arm file switches the whole patch on or off; there is no choice of individual features.
 
 ## Known limits
 

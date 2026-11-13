@@ -22,7 +22,7 @@ Set the tone mode to N-Log as usual, then choose N-Log, S-Log3 or Log3G10 under 
 
 Each Log type changes both the curve and the colour conversion, so S-Log3 comes with S-Gamut3.Cine and Log3G10 with REDWideGamutRGB. When you pick one, the camera's own colour pipeline swaps in that type's curve and matrices at the points where it would use N-Log's, so the footage is encoded directly in the new format.
 
-S-Log3's colour conversion is computed for the Z6III's sensor from the camera's own colour data. Log3G10's conversion is based on the one the Nikon ZR uses for its R3D NE recording, with the Z6III's own per-camera colour correction kept. The curves follow the published S-Log3 and Log3G10 specifications.
+S-Log3's colour conversion is computed for the Z6III's sensor from the camera's own colour data. Log3G10 uses a colour conversion suited to that curve and colour space, with the camera's own per-unit colour correction kept. The curves follow the published S-Log3 and Log3G10 specifications.
 
 ## View assist
 
