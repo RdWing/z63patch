@@ -52,7 +52,7 @@ There is one build, and it contains every feature marked 🟢 or 🟡 below. Fea
 | 🟢 | **[H.265 bitrate tiers](docs/features/h265-quality.md)** | 100%, 60%, 45%, 30% and 20% of the stock bitrate | Test recordings set Nikon's encoder to the chosen bitrate (checked at 100% and 60%) |
 | 🟢 | **[N-RAW quality tiers](docs/features/nraw-quality.md)** | High (3.0 bits per pixel), Fine (2.0), Normal (1.5) and Basic (1.0). Fine and Basic are new. In 6K open gate, High uses 2.5 | Test recordings at all four tiers |
 | 🟢 | **[Anamorphic desqueeze](docs/features/desqueeze.md)** | 1.25× to 2.00× live-view desqueeze, also combined with open gate | Works on the rear screen; viewfinder needs testing on a camera |
-| 🟢 | **[Log options](docs/features/log.md)** | S-Log3 with S-Gamut3.Cine and Log3G10 with REDWideGamutRGB, next to the stock N-Log with BT.2020, with view assist for each | Test recordings in all three Log types decode with the right metadata. Colour and view assist should still be checked on a real camera |
+| 🟢 | **[Log curves and colour spaces](docs/features/log.md)** | Two more Log types, each a log curve together with its own colour space: S-Log3 with S-Gamut3.Cine, and Log3G10 with REDWideGamutRGB, next to the stock N-Log with BT.2020. Choosing a Log type changes both the curve and the colour space of the recording. View assist for each | Test recordings in all three Log types decode with the right metadata. Colour and view assist should still be checked on a real camera |
 | 🔧 | **[RAW pre-capture](docs/features/precapture.md)** | C15 and C30 pre-release bursts saved as RAW, RAW+JPEG or JPEG (stock saves JPEG only) | In progress. Worked in the emulator in an earlier build; not yet in the current build |
 
 🟢 works in the emulator · 🟡 partly working · 🔧 in progress, not in the current build
@@ -149,7 +149,7 @@ All screenshots come from the emulator. The colour bars are its stand-in for the
     <td><img src="docs/images/desqueeze.png" alt="Desqueeze menu from Off to 2.00x"><br><sub><b>Desqueeze</b>: preview anamorphic footage correctly</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="docs/images/log-type-options.png" alt="Log type page with the options N-Log, S-Log3 and Log3G10"><br><sub><b>Log type</b>: N-Log, S-Log3 or Log3G10</sub></td>
+    <td width="50%"><img src="docs/images/log-type-options.png" alt="Log type page with the options N-Log, S-Log3 and Log3G10"><br><sub><b>Log type</b>: each option is a log curve with its own colour space: N-Log with BT.2020, S-Log3 with S-Gamut3.Cine, Log3G10 with REDWideGamutRGB</sub></td>
     <td width="50%"><img src="docs/images/log-type-menu.png" alt="Video recording menu with the Log type row set to S-Log3, next to the H.265 quality and Desqueeze rows"><br><sub><b>Where it is</b>: the Log type row in the video recording menu</sub></td>
   </tr>
   <tr>

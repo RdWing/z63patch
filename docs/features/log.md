@@ -1,16 +1,16 @@
-# Log options
+# Log curves and colour spaces
 
 Status: 🟢 works in the emulator. Never run on a camera.
 
 ## What it does
 
-The Z6III's only Log option is N-Log with BT.2020. z63patch adds two more, each with its own colour space:
+The Z6III's only Log option is N-Log with BT.2020. z63patch adds two more. A Log type here is not only a curve: each one is a log curve together with its own colour space, and choosing it changes both in the recording.
 
-| Log type | Colour space |
-| --- | --- |
-| N-Log (stock) | BT.2020 |
-| S-Log3 | S-Gamut3.Cine |
-| Log3G10 | REDWideGamutRGB |
+| Log type | Log curve | Colour space |
+| --- | --- | --- |
+| N-Log (stock) | N-Log | BT.2020 |
+| S-Log3 | S-Log3 | S-Gamut3.Cine |
+| Log3G10 | Log3G10 | REDWideGamutRGB |
 
 This lets Z6III footage drop into workflows and LUTs built for those formats, and match other cameras on the same shoot.
 
