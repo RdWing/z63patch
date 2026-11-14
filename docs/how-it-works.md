@@ -6,7 +6,7 @@ This page describes how the current build is meant to behave on a camera. All of
 
 There is one build, and it contains every feature listed in the [README](../README.md#features). You don't choose features when the firmware is made.
 
-Once installed, the firmware behaves like stock Nikon firmware until you opt in. You opt in by putting a small **arm file** on the memory card. Its name and contents will be documented with the patcher.
+Once installed, the firmware behaves like stock Nikon firmware until you opt in. You opt in by putting a small **arm file** on the memory card. [Using the patcher](using-the-patcher.md#the-arm-file) explains how to make it and where it goes.
 
 The arm file is a simple on/off switch. With it, the whole patch is active, with every feature. Without it, the camera is stock. You can't use it to turn on individual features.
 

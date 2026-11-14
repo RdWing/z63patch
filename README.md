@@ -9,10 +9,10 @@
 ![Experimental](https://img.shields.io/badge/status-experimental-orange)
 ![Do not flash](https://img.shields.io/badge/hardware-DO__NOT__FLASH-red)
 ![Firmware C2.01](https://img.shields.io/badge/firmware-Z6III%20C2.01-informational)
-![License GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue)
 [![Support on Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/rdwing)
 
-[Status](#current-status) · [Features](#features) · [How it works](#how-it-works) · [Known limits](#known-limits) · [What you will need](#what-you-will-need) · [Delivery](#how-it-will-be-delivered) · [Safety](#safety-and-responsibility) · [Support](#support-the-hardware-testing)
+[Status](#current-status) · [Features](#features) · [How it works](#how-it-works) · [Known limits](#known-limits) · [What you will need](#what-you-will-need) · [Using the patcher](#using-the-patcher) · [Safety](#safety-and-responsibility) · [Support](#support-the-hardware-testing)
 
 <img src="docs/images/open-gate-6k-30p.png" width="640" alt="Frame size/frame rate menu with [FX 3:2] 6048x4032; 30p highlighted">
 
@@ -159,7 +159,7 @@ All screenshots come from the emulator. The colour bars are its stand-in for the
 
 ## What you will need
 
-When the patcher is published, you will need:
+You need:
 
 - **A Nikon Z6III on firmware C2.01.**
 - **Nikon's official C2.01 firmware file** for the Z6III, unmodified, as Nikon distributes it.
@@ -168,9 +168,11 @@ When the patcher is published, you will need:
 
 The patcher checks that the firmware file is Nikon's unmodified C2.01 and that the key material is correct for it. It refuses any other file or material.
 
-## How it will be delivered
+## Using the patcher
 
-The patch will be published as a source-only patcher. It runs on your own computer, works on your own copy of Nikon's firmware file and your own key material, and produces the patched update file from them. The repository will contain no Nikon firmware, original or modified, and no key material.
+The patch is published as a source-only patcher. It runs on your own computer, works on your own copy of Nikon's firmware file and your own key material, and produces the patched update file from them. The repository contains no Nikon firmware, original or modified, and no key material.
+
+[Using the patcher](docs/using-the-patcher.md) explains how to build and check the file, what the patcher refuses, how to make the arm file and how to go back to stock.
 
 
 ## Road to real hardware
@@ -202,7 +204,7 @@ What the project does to reduce the risk:
 - **Small footprint.** Only the camera's main firmware is changed. The other parts of Nikon's update file are passed through unchanged, and the camera's startup program is never touched. The patch doesn't write to the camera's firmware memory itself. Its settings are saved through the camera's own settings save.
 - **Checked inputs and outputs.** The patcher accepts only Nikon's unmodified C2.01 file and the matching key material. It then checks the patched result independently and refuses to write it if anything is outside the expected changes.
 
-None of this removes the main risk: if a patched firmware fails to start on a real camera, there is no known way to recover it.
+None of this removes the main risk: if a patched firmware fails to start on a real camera, **<ins>there is no known way to recover it</ins>**.
 
 ## Support the hardware testing
 
@@ -241,7 +243,7 @@ Please don't test builds on your own camera and send results. If a flash fails, 
 
 ## Credits and legal
 
-- A few builder components, such as the ELF linker and the NEF writer, are adapted from [XinmiaoZhao/NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) (GPL-3.0). [NOTICE.md](NOTICE.md) lists exactly what was adapted.
-- Licensed under [GPL-3.0](LICENSE). The license grants no rights to Nikon firmware.
+- A few builder components, such as the ELF linker and the Log tables, are adapted from [XinmiaoZhao/NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) (GPL-3.0). [NOTICE.md](NOTICE.md) lists exactly what was adapted.
+- Copyright (C) 2026 RdWing. Licensed under [AGPL-3.0-only](LICENSE); the files adapted from upstream stay under [GPL-3.0-only](LICENSES/GPL-3.0-only.txt). Each source file's SPDX header names its license. The license grants no rights to Nikon firmware.
 - Not affiliated with or endorsed by Nikon. Nikon, Z6III, N-RAW and N-Log are trademarks of Nikon Corporation. ProRes is a trademark of Apple Inc. S-Log3 and S-Gamut3.Cine are trademarks of Sony Group Corporation. Log3G10 and REDWideGamutRGB are trademarks of RED Digital Cinema.
 - Modifying camera firmware will probably void your warranty and can permanently damage your camera. This software is provided without warranty of any kind.

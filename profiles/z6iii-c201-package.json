@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "target": "Z6III C2.01",
+  "status": "DO_NOT_FLASH",
+  "original_sha256": "2369c01dcc194c1b9517e91ad2ee8bab8ff03cf52635473404ce8553b59ce131",
+  "package_bytes": 117641453,
+  "body_offset": 608,
+  "body_bytes": 117640845,
+  "body_sha256": "3170ec4b3b5be263f24c0970f6ea487b77c6cfd7d68c07948bbf93bec409a2c8",
+  "header_digest_offset": 576,
+  "directory_bytes": 208,
+  "members": [
+    {
+      "name": "ex2010_0200a0.bi",
+      "offset": 208,
+      "bytes": 524290,
+      "payload_sha256": "791afdc32a0e779fce2dd3cf655d28f5109294e4b3c89a1a5741c01018fced04",
+      "member_sha256": "41149887a9d47f82d67694e7bfaa86bb40c9f3a48709ee988904e6558921ee56"
+    },
+    {
+      "name": "_tpj01_0210.bin",
+      "offset": 524498,
+      "bytes": 57346,
+      "payload_sha256": "809515c1a28b339b284c751663190135dcb6df778345f581a5f7c9c6ea8c054e",
+      "member_sha256": "689f80feb0d271d73ac719e0c5872cfc0dac643097e528b6a1b156d4c55efe1a"
+    },
+    {
+      "name": "eg2010_0201i0.bi",
+      "offset": 581844,
+      "bytes": 88830367,
+      "payload_sha256": "236bbd874e0942fd91fb54a99af456f4ebcc0fd966af930753c43efd1839fe87",
+      "member_sha256": "d78e4d0358f550d9f3a3a9da3a8beee314a3b90de8bcc13117e029f7821cf252"
+    },
+    {
+      "name": "vr2010_010000.bi",
+      "offset": 89412211,
+      "bytes": 838664,
+      "payload_sha256": "e60395cfd4f65bd457a9ea0df7412241bd9e6017dc56f3ec3310c92daad02d0d",
+      "member_sha256": "98bbe43f8d19875f114ce05417d5f3447bf75d4ac5009027dd00bc4dcb709f56"
+    },
+    {
+      "name": "li2010_0201i0.bi",
+      "offset": 90250875,
+      "bytes": 27389954,
+      "payload_sha256": "485cce83ecb8bf4e9b6665f495d92dc5f5fa062080d1b244314e0001a6ae0222",
+      "member_sha256": "46256bb91ceb890f6c0e2d302610749662470d4362d1785429ce1f57d2b70321"
+    }
+  ],
+  "qualification": {
+    "format_only": true,
+    "native_admission": false,
+    "programming": false,
+    "recovery": false,
+    "physical_acceptance": false
+  },
+  "gate_package": {
+    "arm-time-all": {
+      "stage": "s7-all",
+      "main_sha256": "34f6e79ff23f198c03086dbed752fbb472a0f1fb7a1c5038e52bca90284927a4",
+      "main_member_sha256": "064717dab460715e008f3e16199d58c58590032d4d448eefbd78baf5eaef926e",
+      "body_sha256": "c372b66a1a912d52f84c896ebf3cb73f180b4f6282eb2c87e35d6be2524da238",
+      "output_sha256": "4125148a76d869af646a20d44db943d0145aacef8ff4a00993a7a90dd2cde9d1",
+      "note": "Expected results for the stock C2.01 input (hashes only)."
+    }
+  }
+}
