@@ -12,7 +12,7 @@ There is one build. It contains every feature in the [feature table](../README.m
 - **Nikon's official C2.01 firmware file for the Z6III**, `Z6_3_0201.bin`, unmodified, as Nikon distributes it.
 - **Key material for that file:** three values, an AES-256 key (32 bytes), a 16-byte counter block and an 8-byte digest suffix, in one file. The layout doesn't matter: JSON, hex text (plain, byte by byte, or as a C array), base64, base32, a list of decimal byte values or raw binary all work, in any order. This project doesn't supply key material and doesn't say how to get it.
 - **Python 3** with `venv` and `pip`. The patcher was checked with Python 3.14.
-- **clang**, the LLVM C compiler, with support for the 64-bit Arm target (`--target=aarch64-none-elf`). Apple's clang from the Xcode command line tools works. On Linux, install your distribution's `clang` package.
+- **The reference compiler: Apple clang 21.0.0 (clang-2100.3.34.2)**, from the Xcode command line tools (`clang --version` shows it). The release was built with it, and the expected hashes in `RELEASE-HASHES.txt` and the built-in expected-result checks only reproduce with it. Another clang version, such as 23.1.4 or your distribution's `clang` package, can generate different code from the same source, and then the patcher refuses the result (`result differs from the expected result for stock C2.01`) or the gate verifier rejects the image. That refusal is the safety check working. Don't work around it: only the reference build is the reviewed image. A build with another compiler is untested and not supported. Version 0.1.0 supports no other compiler.
 - About 2 GB of free memory, and 150 MB of free disk space for the result.
 
 ## Install the dependencies
@@ -47,7 +47,7 @@ A build takes about ten seconds. When it succeeds, the patcher prints a report a
 | `Z6_3_0201.bin.DO_NOT_FLASH` | the patched update file |
 | `manifest.json` | the same report: hashes of the input and output, what changed and every check that passed |
 
-If clang has another name on your system (for example `clang-18`), add `--compiler clang-18`.
+If the reference clang is installed under another name or path, add `--compiler` with that name or path. This is for choosing the reference compiler only. Passing a different clang version doesn't make it supported.
 
 ## What the patcher checks and refuses
 
@@ -135,6 +135,7 @@ The arm file is an on/off switch for the whole patch. With it on the card, every
 | `output path already exists` | Choose a new folder name for `--output`, or remove the old folder yourself. |
 | `install requirements-container.txt in an isolated environment` | The `cryptography` package is missing. Run the commands from [Install the dependencies](#install-the-dependencies) and use `.venv/bin/python`. |
 | `[Errno 2] No such file or directory: 'clang'` | clang isn't installed, or has another name. See [What you need](#what-you-need) and the `--compiler` option. |
+| `result differs from the expected result for stock C2.01`, or `verify_gate did not accept the image`, after a normal run | You're probably using a clang other than the reference Apple clang 21.0.0 (clang-2100.3.34.2). Run `clang --version` and see [What you need](#what-you-need). |
 | any other refusal (`… differs`, `… is not stock …`, `verify_gate did not accept the image`, `package differs from the expected package for stock C2.01`) | A safety check failed. With Nikon's unmodified file, the right key material and an unmodified copy of this repository this shouldn't happen. Please open an issue with the message. Don't share your key material. |
 
 ## At your own risk: an installable file name
