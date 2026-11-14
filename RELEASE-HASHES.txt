@@ -1,0 +1,13 @@
+# z63patch release hashes (SHA-256), signed by RdWing.
+# Signature: RELEASE-HASHES.txt.sig. Signing key: .github/allowed_signers
+# Key fingerprint: SHA256:6y4PYobuXsvVWN6oxEEkMLFOSGvj35gLPAMcvoZuFbM
+# How to check: docs/using-the-patcher.md, "Checking that a release is genuine".
+#
+# Input: Nikon's unmodified Z6III C2.01 update file
+2369c01dcc194c1b9517e91ad2ee8bab8ff03cf52635473404ce8553b59ce131  Z6_3_0201.bin
+# Output of package.py --recipe arm-time-all --build-gate (DO NOT FLASH)
+4125148a76d869af646a20d44db943d0145aacef8ff4a00993a7a90dd2cde9d1  Z6_3_0201.bin.DO_NOT_FLASH
+# The patched main firmware image inside it (tools/build_arm_time.py --stage s7-all)
+34f6e79ff23f198c03086dbed752fbb472a0f1fb7a1c5038e52bca90284927a4  MAIN (s7-all image)
+# The arm file (tools/make_arm_file.py)
+5909208bc9057eb9dce6315999b19b8fdab4b1288bdedf9c6b1f2a1a8bfbd174  Z63ARM.BIN

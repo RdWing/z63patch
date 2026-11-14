@@ -91,6 +91,21 @@ To run the independent package verifier on a written file, for example after cop
 
 It decrypts the file with its own code, checks every field and every unchanged byte, reruns the safety checks on the firmware inside, and prints a report with `"passed": true`. Any difference stops it with a message.
 
+### Checking that a release is genuine
+
+Releases are signed by RdWing with an SSH key. `RELEASE-HASHES.txt` lists the official hashes of the input file, the patched update file, the firmware image inside it and the arm file. `RELEASE-HASHES.txt.sig` is its signature. Release tags are signed with the same key, and GitHub shows them as "Verified".
+
+To check the hashes file and a release tag from a copy of this repository:
+
+```sh
+ssh-keygen -Y verify -f .github/allowed_signers \
+    -I 19214916+RdWing@users.noreply.github.com -n file \
+    -s RELEASE-HASHES.txt.sig < RELEASE-HASHES.txt
+git -c gpg.ssh.allowedSignersFile=.github/allowed_signers tag -v TAG
+```
+
+Both should report a good signature from `19214916+RdWing@users.noreply.github.com` with key `SHA256:6y4PYobuXsvVWN6oxEEkMLFOSGvj35gLPAMcvoZuFbM`. A copy that has different hashes, or one with no valid signature from this key, is not an official release. If more signing keys are added later, they will be listed in `.github/allowed_signers`, and the signatures that older keys made stay valid.
+
 ## The arm file
 
 The patched firmware does nothing until it finds the arm file on the memory card. The arm file is a 64-byte file named `Z63ARM.BIN`. It is the same for everyone who builds from Nikon's C2.01 file, and making it needs neither the firmware nor key material:
