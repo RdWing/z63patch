@@ -245,5 +245,6 @@ Please don't test builds on your own camera and send results. If a flash fails, 
 
 - A few builder components, such as the ELF linker and the Log tables, are adapted from [XinmiaoZhao/NikonFirmwarePatch](https://github.com/XinmiaoZhao/NikonFirmwarePatch) (GPL-3.0). [NOTICE.md](NOTICE.md) lists exactly what was adapted.
 - Copyright (C) 2026 RdWing. Licensed under [AGPL-3.0-only](LICENSE); the files adapted from upstream stay under [GPL-3.0-only](LICENSES/GPL-3.0-only.txt). Each source file's SPDX header names its license. The license grants no rights to Nikon firmware.
+- **Building on this?** You're welcome to, under the license. Please credit z63patch and link back to [RdWing/z63patch](https://github.com/RdWing/z63patch) in your README or release notes. The license also requires you to keep the copyright notices and file headers and to publish your source.
 - Not affiliated with or endorsed by Nikon. Nikon, Z6III, N-RAW and N-Log are trademarks of Nikon Corporation. ProRes is a trademark of Apple Inc. S-Log3 and S-Gamut3.Cine are trademarks of Sony Group Corporation. Log3G10 and REDWideGamutRGB are trademarks of RED Digital Cinema.
 - Modifying camera firmware will probably void your warranty and can permanently damage your camera. This software is provided without warranty of any kind.
